@@ -181,14 +181,20 @@ def main():
 
 if __name__ == '__main__':
     
-    ID = os.environ.get('LOGIN_ID')
-    PASSWORD = os.environ.get('LOGIN_PASSWORD')
-    API_KEY = os.environ.get('BAIDU_API_KEY')
-    SECRET_KEY = os.environ.get('BAIDU_SECRET_KEY')
-    SERVERCHAN_SCKEY = os.environ.get('SERVERCHAN_SCKEY')
+    import argparse
     
-    print(ID)
-    
-    logging.basicConfig()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('id')
+    parser.add_argument('password')
+    parser.add_argument('api')
+    parser.add_argument('secret')
+    parser.add_argument('sckey')
+
+    args = parser.parse_args()
+    ID = args.id
+    Password = args.password
+    API_KEY = args.api
+    SECRET_KEY = args.secret
+    SERVERCHAN_SCKEY = args.sckey
     
     main()
