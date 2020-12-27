@@ -192,7 +192,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     ID = args.id
-    Password = args.password
+    PASSWORD = args.password
     API_KEY = args.api
     SECRET_KEY = args.secret
     SERVERCHAN_SCKEY = args.sckey
