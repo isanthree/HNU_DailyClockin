@@ -187,6 +187,8 @@ if __name__ == '__main__':
     SECRET_KEY = os.environ.get('BAIDU_SECRET_KEY')
     SERVERCHAN_SCKEY = os.environ.get('SERVERCHAN_SCKEY')
     
+    print(ID)
+    
     logging.basicConfig()
     
     main()
