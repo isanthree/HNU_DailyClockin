@@ -16,5 +16,12 @@
 
 3. 打开仓库的action
 + action触发机制
-  + 每日自动在00:15打卡
-    + 打卡时间修改
+	+ push后自动触发 
+	+ 在action中点击Run workflow
+	+ 每日自动在00:15执行
+		+ 时间修改：`.github/workflows/clockin.yml`中
+
+```
+  schedule:
+ - cron: '15 16 * * *' #UTC时间，参考https://crontab.guru/
+```
