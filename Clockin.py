@@ -164,7 +164,7 @@ def clockin(access_cookies):
         'Content-Type':'application/json;charset=UTF-8',
         'Referer': 'https://fangkong.hnu.edu.cn/app/'
     }
-    para = {"Longitude":null,"Latitude":null,"RealProvince":"湖南省","RealCity":"长沙市",
+    para = {"Longitude":"","Latitude":"","RealProvince":"湖南省","RealCity":"长沙市",
             "RealCounty":"岳麓区","RealAddress":"湖南大学天马学生公寓","BackState":1,"MorningTemp":"36.5","NightTemp":"36.5","tripinfolist":[]}
     
     response = requests.post(url, headers=headers, json=para, cookies=access_cookies)
